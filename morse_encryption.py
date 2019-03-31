@@ -4,25 +4,26 @@ from resources import *
 def to_morse(input_message):
     encrypted_message = ""
 
-    # for cyklus ktory prejde po celom slove a zasifruje kazdy znak
+    # for cycle that iterates trough the message encrypting all the characters
     for char in input_message:
-        # ak je znak medzera zapise sa lomitko
+        # if there is empty space, "/" is appended to the encrypted message
         if char == " ":
             encrypted_message += "/"
         else:
-            # ziska pismeno z abecedy a hned aj prideli medzeru aby bola mozna desifracia
+            # gets the to-be encrypted character from the imported dictionary,
+            # empty space is added som decryption is possible
             encrypted_char = morse_alphabet[char] + " "
 
-            # do vysledneho stringu sa pripise sifrovane pismeno/cislo zo spravy
+            # encrypted character is appended to the encrypted message
             encrypted_message += encrypted_char
-    # vrati sifrovany text
+    # returns encrypted message
     return encrypted_message
 
 
 def input_control(input_message):
-    # pre kazdy znak v inpute zisti ci je povoleny (podla zadanej abecedy vyssie)
+    # every character in the input message gets checked for validity
     for char in input_message:
-        # ak sa znak nenachadza v alphabet, vrati sa false
+        # if there is no such character in the alphabet -> returns false, encryption not possible
         if char not in alphabet:
             return False
     return True
