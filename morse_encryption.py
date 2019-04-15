@@ -11,7 +11,7 @@ def to_morse(input_message):
             encrypted_message += "/"
         else:
             # gets the to-be encrypted character from the imported dictionary,
-            # empty space is added som decryption is possible
+            # empty space is added so decryption is possible
             encrypted_char = morse_alphabet[char] + " "
 
             # encrypted character is appended to the encrypted message
