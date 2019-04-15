@@ -1,4 +1,4 @@
-from resources import *
+from resources import alphabet, morse_alphabet
 
 
 def to_morse(input_message):
@@ -21,7 +21,7 @@ def to_morse(input_message):
 
 
 def input_control(input_message):
-    # every character in the input message gets checked for validity
+    # every character in the input message is checked for validity
     for char in input_message:
         # if there is no such character in the alphabet -> returns false, encryption not possible
         if char not in alphabet:
