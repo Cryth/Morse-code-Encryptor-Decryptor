@@ -30,4 +30,6 @@ def main():
 
 
 if __name__ == '__main__':
+    print("Startin application..")
     main()
+    print("Application terminated.")
