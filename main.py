@@ -31,6 +31,5 @@ def main():
 
 if __name__ == '__main__':
     print("Starting application..")
-    pass
     main()
     print("Application terminated.")
